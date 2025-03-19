@@ -1,0 +1,10 @@
+{  
+    "name": "csf24",  
+    "short_name": "csf24",  
+    "theme_color": "#fff",  
+    "background_color": "#fff",  
+    "display": "browser", 
+     "orientation": "portrait",  
+     "scope": "/",  
+     "start_url": "/"
+}

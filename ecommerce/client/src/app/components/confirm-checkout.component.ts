@@ -72,8 +72,6 @@ export class ConfirmCheckoutComponent implements OnInit{
       }
     );
   }
-  test(event:any){
-    console.info('>> button: ', event.target.value)
-  } 
+  
 
 }
