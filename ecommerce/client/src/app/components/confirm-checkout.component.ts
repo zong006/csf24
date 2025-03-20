@@ -66,6 +66,7 @@ export class ConfirmCheckoutComponent implements OnInit{
         console.info('>>> post form response: ', response)
         console.info('>>> status: ', response.status)
         alert('Order created. Order Id: ' + response.body?.orderId)
+        this.cartStore.clearCart()
         this.router.navigate(['/'])
       },
       error: (err) => {

@@ -25,9 +25,14 @@ export class CartStore extends ComponentStore<cartState>{
             const newState : cartState = {
                 cartSlice : [...currState.cartSlice, itemsToAdd]
             }
+            
             return newState;
         }
     )
 
+    readonly clearCart = this.updater((currState) => ({
+        cartSlice : []
+    })
+    );
 
 }
