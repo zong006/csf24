@@ -4,13 +4,13 @@ package vttp.batch4.csf.ecommerce.models;
 // If this class is changed, any assessment task relying on this class will
 // not be marked
 public class LineItem {
-  private String prodId;
+  private String productId;
   private String name;
   private int quantity;
   private float price;
 
-  public void setProdId(String prodId) { this.prodId = prodId; }
-  public String getProductId() { return this.prodId; }
+  public void setProductId(String prodId) { this.productId = prodId; }
+  public String getProductId() { return this.productId; }
 
   public void setName(String name) { this.name = name; }
   public String getName() { return this.name; }
@@ -24,6 +24,6 @@ public class LineItem {
   @Override
   public String toString() {
     return "LineItem{productId=%s, name=%s, quantity=%d, price=%.3f}"
-      .formatted(prodId, name, quantity, price);
+      .formatted(productId, name, quantity, price);
   }
 }

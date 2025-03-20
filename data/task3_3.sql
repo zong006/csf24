@@ -8,6 +8,7 @@ create table orders (
     name varchar(64) not null,
     address varchar(64) not null,
     priority boolean,
+    order_date date not null,
     comments varchar(256)
 );
 
@@ -20,3 +21,4 @@ create table order_details (
     price decimal(15,2) not null,
     constraint fk_id foreign key (order_id) references orders(order_id) on delete cascade
 );
+

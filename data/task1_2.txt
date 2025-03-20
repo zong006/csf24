@@ -4,3 +4,5 @@ Write the command to import products.csv into Mongo in this file
 
 
 mongoimport --uri <<get uri from railway>> -d csf24 -c products --type=csv  --file=../data/products.csv --headerline 
+
+uri to use is mongodb+srv://user1234:H6sbYWhqHEwO6t9F@cluster0.p5bks.mongodb.net/csf24 
