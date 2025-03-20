@@ -61,15 +61,19 @@ export class ConfirmCheckoutComponent implements OnInit{
     console.info('>>>process form: ', order);
 
     this.productService.checkout(order)
-    .subscribe(
-      (response) => {
+    .subscribe({
+      next: (response) => {
         console.info('>>> post form response: ', response)
         console.info('>>> status: ', response.status)
         alert('Order created. Order Id: ' + response.body?.orderId)
-        if (response.status === 200){
-          this.router.navigate(['/'])
-        }
+        this.router.navigate(['/'])
+      },
+      error: (err) => {
+        // console.info('>>>error: ', err.error.message)
+        alert('Error creating order: '+ err.error.message);
       }
+      },
+      
     );
   }
   

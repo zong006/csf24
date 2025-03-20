@@ -39,16 +39,7 @@ public class PurchaseOrderRepository {
         (?, ?, ?, ?, ?)
         """;
     List<LineItem> lineItems = order.getCart().getLineItems();
-    // try {
-    //   lineItems.forEach(li -> {
-    //     template.update(SQL_INSERT_LINE_ITEMS, 
-    //                     order.getOrderId(), li.getProductId(), li.getName(), li.getQuantity(), li.getPrice()
-    //                   );
-    //   });  
-    // } catch (Exception e) {
-    //   // TODO: handle exception
-    //   e.printStackTrace();
-    // }
+    
     template.batchUpdate(SQL_INSERT_LINE_ITEMS, lineItems, lineItems.size(), 
                           (PreparedStatement ps, LineItem item) -> {
                             ps.setString(1, order.getOrderId());
